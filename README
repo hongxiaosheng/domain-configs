@@ -1,0 +1,20 @@
+发布流程
+编写完成的 Operator， 通过如下命令进行安装，并且查看对应的 crd
+$ make install
+$ kubectl get crds
+发布完成后，可以通过如下命令进行运行，可以看到此时对应的控制器已经开始监听
+
+$ make run
+
+
+发布上线
+构建镜像
+$ make docker-build IMG=hongxiaosheng/domain-config:v0.0.3
+
+推送镜像
+
+$ make docker-push IMG=hongxiaosheng/domain-config:v0.0.3
+
+发布至Kubernetes
+
+$ make deploy IMG=hongxiaosheng/domain-config:v0.0.3

@@ -1,0 +1,24 @@
+# permissions for end users to edit initetcds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: initetcd-editor-role
+rules:
+- apiGroups:
+  - domain-config.cmit.com
+  resources:
+  - initetcds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - domain-config.cmit.com
+  resources:
+  - initetcds/status
+  verbs:
+  - get

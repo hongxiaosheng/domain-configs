@@ -1,0 +1,20 @@
+# permissions for end users to view initetcds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: initetcd-viewer-role
+rules:
+- apiGroups:
+  - domain-config.cmit.com
+  resources:
+  - initetcds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - domain-config.cmit.com
+  resources:
+  - initetcds/status
+  verbs:
+  - get

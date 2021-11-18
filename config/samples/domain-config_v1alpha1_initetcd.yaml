@@ -1,0 +1,9 @@
+apiVersion: domain-config.cmit.com/v1alpha1
+kind: InitEtcd
+metadata:
+  name: initetcd-sample
+spec:
+  # Add fields here
+#  initConf: MTI3LjAuMC4xOjIzNzksMTkyLjE2OC40My4yMTQ6MjM3OQo
+#  initConf: MTI3LjAuMC4xOjIzNzksMTkyLjE2OC40My4yMTQ6MjM3OQ==
+  initConf: MTkyLjE2OC40My4yMTQ6MjM3OQ==

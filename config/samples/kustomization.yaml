@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- domain-config_v1alpha1_dnsconfig.yaml
+- domain-config_v1alpha1_initetcd.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
